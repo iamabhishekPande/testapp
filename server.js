@@ -9,6 +9,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// Serve index.html as the root route
+app.get('/redirect', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // Serve static files (e.g., CSS, JavaScript) from the public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
