@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 8081;
 
 // Serve index.html as the root route
 app.get('/', (req, res) => {
